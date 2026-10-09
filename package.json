@@ -1,0 +1,51 @@
+{
+  "name": "@epicauth/seller",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for the EpicAuth Seller API",
+  "keywords": [
+    "epicauth",
+    "seller",
+    "reseller",
+    "api",
+    "sdk",
+    "typescript",
+    "license-key"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpicAuth/EpicAuth-Seller.git"
+  },
+  "license": "Elastic-2.0",
+  "scripts": {
+    "dev": "bun --watch run src/main.ts",
+    "typecheck": "bunx tsc --noEmit",
+    "build": "bunx tsc -p tsconfig.build.json",
+    "prepublishOnly": "bun run typecheck && bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "@epicauth/seller-core": "^1.0.3"
+  }
+}
