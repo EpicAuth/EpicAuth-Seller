@@ -20,6 +20,16 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
+    },
+    "./v1": {
+      "types": "./dist/v1/index.d.ts",
+      "import": "./dist/v1/index.js",
+      "default": "./dist/v1/index.js"
+    },
+    "./v2": {
+      "types": "./dist/v2/index.d.ts",
+      "import": "./dist/v2/index.js",
+      "default": "./dist/v2/index.js"
     }
   },
   "sideEffects": false,
@@ -46,6 +56,6 @@
     "typescript": "^7"
   },
   "dependencies": {
-    "@epicauth/seller-core": "^1.0.3"
+    "@epicauth/seller-core": "^2.0.0"
   }
 }
